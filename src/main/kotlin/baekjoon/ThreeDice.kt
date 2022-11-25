@@ -1,25 +1,39 @@
 package baekjoon
 
+import java.util.StringTokenizer
+
 class ThreeDice
 
-fun main() = with(System.`in`.bufferedReader()) {
-    var reward = 0
-    val result = readLine().split(" ").map { it.toInt() }
+private val br = System.`in`.bufferedReader()
+private val bw = System.out.bufferedWriter()
 
-    if (result.distinct().count() == 3) {
-        // reward = result.max() * 1000
+fun main() {
+    var reward = 0
+    val dice = mutableListOf<Int>()
+
+    with(StringTokenizer(br.readLine())) {
+        dice.add(nextToken().toInt())
+        dice.add(nextToken().toInt())
+        dice.add(nextToken().toInt())
+    }
+
+    if (dice.distinct().count() == 3) {
+        // reward = dice.max() * 1000
         // 리스트에서 가장 큰값 찾아주는 함수 max()를 백준에서 인식을 못함
         // 대체 방법
         var max = 0
-        for (i in result.indices) {
-            if (max < result[i]) { max = result[i] }
+        for (i in dice.indices) {
+            if (max < dice[i]) { max = dice[i] }
         }
         reward = max * 100
-    } else if (result.distinct().count() == 2) {
-        val duplicatedValue = result.groupingBy { it }.eachCount().filter { it.value == 2 }
+    } else if (dice.distinct().count() == 2) {
+        val duplicatedValue = dice.groupingBy { it }.eachCount().filter { it.value == 2 }
         reward = 1000 + (duplicatedValue.keys.first() * 100)
-    } else if (result.distinct().count() == 1) {
-        reward = 10000 + (result.first() * 1000)
+    } else if (dice.distinct().count() == 1) {
+        reward = 10000 + (dice.first() * 1000)
     }
     println(reward)
+
+    bw.close()
+    br.close()
 }
