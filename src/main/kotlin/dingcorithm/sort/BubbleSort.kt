@@ -1,4 +1,4 @@
-package dingcorithm
+package dingcorithm.sort
 
 fun main() {
     val input = intArrayOf(4,6,2,9,1)

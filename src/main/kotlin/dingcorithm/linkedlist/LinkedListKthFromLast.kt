@@ -1,4 +1,4 @@
-package dingcorithm
+package dingcorithm.linkedlist
 
 fun main() {
     val linkedList = LinkedListKthFromLast(6)

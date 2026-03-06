@@ -1,4 +1,4 @@
-package dingcorithm
+package dingcorithm.recursive
 
 /***
  * DFS + 재귀 함수
