@@ -1,6 +1,6 @@
 # Default ignored files
 /shelf/
-/workspace.xml
+/.idea/workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -10,4 +10,13 @@
 /git_toolbox_blame.xml
 /git_toolbox_prj.xml
 
+# IntelliJ
+.idea/
+*.iml
+
+# build outputs
 out/
+**/out/
+
+# bytecode
+*.class
