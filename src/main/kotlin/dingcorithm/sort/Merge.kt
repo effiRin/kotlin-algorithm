@@ -14,6 +14,10 @@ fun main() {
 }
 
 class Merge {
+
+    /***
+     * O(N)
+     */
     fun merge(arrayA: IntArray, arrayB: IntArray): IntArray {
         val result = IntArray(arrayA.size + arrayB.size)
         var resultIndex = 0
