@@ -31,7 +31,7 @@ class GetReceiverTopOrdersStack {
 
         while(stack.isNotEmpty()) {
             val height = stack.removeLast()
-            var currentIndex = stack.size // pop하고 난 후가 레이저 검사할 top 인덱스 (왼쪽 바로 옆 / 1-based index)
+            val currentIndex = stack.size // pop하고 난 후가 레이저 검사할 top 인덱스 (왼쪽 바로 옆 / 1-based index)
 
             for(i in (currentIndex - 1) downTo 0) {
                 if(height <= tops[i]) {
