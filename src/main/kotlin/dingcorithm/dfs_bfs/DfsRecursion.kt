@@ -1,4 +1,4 @@
-package dingcorithm.dfs
+package dingcorithm.dfs_bfs
 
 
 fun main() {

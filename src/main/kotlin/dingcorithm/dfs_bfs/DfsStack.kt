@@ -1,6 +1,4 @@
-package dingcorithm.dfs
-
-import java.util.LinkedList
+package dingcorithm.dfs_bfs
 
 fun main() {
     val graph = mapOf(
